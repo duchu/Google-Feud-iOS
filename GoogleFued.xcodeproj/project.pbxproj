@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1406DF775833D9ABC27DFD3D /* Pods_GoogleFuedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC00C49AF2ABB35FEE8AEC5 /* Pods_GoogleFuedUITests.framework */; };
+		3667ECB6C1B5770E52C98BEA /* Pods_GoogleFued.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EB5BD5947F86C38FFEFF73 /* Pods_GoogleFued.framework */; };
+		5FAED0F99AA5BE3856060B94 /* Pods_GoogleFuedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129918492651C9E209D5E782 /* Pods_GoogleFuedTests.framework */; };
+		B505358B1D5E4204003A3F8A /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = B505358A1D5E4204003A3F8A /* Roboto */; };
+		B51605F61D60B8D1000FFFBD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51605F51D60B8D1000FFFBD /* CategoryViewController.swift */; };
+		B51605F81D60C8D2000FFFBD /* Google Feud 1 X.png in Resources */ = {isa = PBXBuildFile; fileRef = B51605F71D60C8D2000FFFBD /* Google Feud 1 X.png */; };
+		B51605FA1D60C8D7000FFFBD /* Google Feud 2 X.png in Resources */ = {isa = PBXBuildFile; fileRef = B51605F91D60C8D7000FFFBD /* Google Feud 2 X.png */; };
+		B51605FC1D60C8DE000FFFBD /* Google Feud 3 X.png in Resources */ = {isa = PBXBuildFile; fileRef = B51605FB1D60C8DE000FFFBD /* Google Feud 3 X.png */; };
+		B56162541D5E486000839D36 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56162531D5E486000839D36 /* Questions.swift */; };
+		B56162561D5E4F9800839D36 /* GFLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B56162551D5E4F9800839D36 /* GFLogo.png */; };
+		B56162581D5E50A200839D36 /* Material-Search 48px.png in Resources */ = {isa = PBXBuildFile; fileRef = B56162571D5E50A200839D36 /* Material-Search 48px.png */; };
+		B564FE8B1D5D1BDF004A9354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564FE8A1D5D1BDF004A9354 /* AppDelegate.swift */; };
+		B564FE8D1D5D1BDF004A9354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564FE8C1D5D1BDF004A9354 /* ViewController.swift */; };
+		B564FE901D5D1BDF004A9354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B564FE8E1D5D1BDF004A9354 /* Main.storyboard */; };
+		B564FE921D5D1BDF004A9354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B564FE911D5D1BDF004A9354 /* Assets.xcassets */; };
+		B564FE951D5D1BDF004A9354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B564FE931D5D1BDF004A9354 /* LaunchScreen.storyboard */; };
+		B564FEA01D5D1BDF004A9354 /* GoogleFuedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564FE9F1D5D1BDF004A9354 /* GoogleFuedTests.swift */; };
+		B564FEAB1D5D1BDF004A9354 /* GoogleFuedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564FEAA1D5D1BDF004A9354 /* GoogleFuedUITests.swift */; };
+		B565119C1D651FF10063F2A2 /* Feugle.png in Resources */ = {isa = PBXBuildFile; fileRef = B565119B1D651FF10063F2A2 /* Feugle.png */; };
+		B565119F1D652B280063F2A2 /* Guess My Search.png in Resources */ = {isa = PBXBuildFile; fileRef = B565119E1D652B280063F2A2 /* Guess My Search.png */; };
+		B5FE26E91D5F493200F74BC1 /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE26E81D5F493200F74BC1 /* Completions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B564FE9C1D5D1BDF004A9354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B564FE7F1D5D1BDF004A9354 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B564FE861D5D1BDF004A9354;
+			remoteInfo = GoogleFued;
+		};
+		B564FEA71D5D1BDF004A9354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B564FE7F1D5D1BDF004A9354 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B564FE861D5D1BDF004A9354;
+			remoteInfo = GoogleFued;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		129918492651C9E209D5E782 /* Pods_GoogleFuedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleFuedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BF00CA0FE1DE8CBA1D5172 /* Pods-GoogleFued.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFued.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFued/Pods-GoogleFued.debug.xcconfig"; sourceTree = "<group>"; };
+		35FFE91BDC9590181C13E5C6 /* Pods-GoogleFuedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFuedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFuedTests/Pods-GoogleFuedTests.release.xcconfig"; sourceTree = "<group>"; };
+		52E9C950E445FD73E9284066 /* Pods-GoogleFuedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFuedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFuedUITests/Pods-GoogleFuedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		616B6584DACCE2221EBC99DB /* Pods-GoogleFued.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFued.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFued/Pods-GoogleFued.release.xcconfig"; sourceTree = "<group>"; };
+		86522E16B3726C000BAAA517 /* Pods-GoogleFuedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFuedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFuedTests/Pods-GoogleFuedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B505358A1D5E4204003A3F8A /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
+		B51605F51D60B8D1000FFFBD /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		B51605F71D60C8D2000FFFBD /* Google Feud 1 X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google Feud 1 X.png"; sourceTree = "<group>"; };
+		B51605F91D60C8D7000FFFBD /* Google Feud 2 X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google Feud 2 X.png"; sourceTree = "<group>"; };
+		B51605FB1D60C8DE000FFFBD /* Google Feud 3 X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google Feud 3 X.png"; sourceTree = "<group>"; };
+		B56162531D5E486000839D36 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		B56162551D5E4F9800839D36 /* GFLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GFLogo.png; sourceTree = "<group>"; };
+		B56162571D5E50A200839D36 /* Material-Search 48px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Material-Search 48px.png"; sourceTree = "<group>"; };
+		B564FE871D5D1BDF004A9354 /* GoogleFued.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleFued.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B564FE8A1D5D1BDF004A9354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B564FE8C1D5D1BDF004A9354 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B564FE8F1D5D1BDF004A9354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B564FE911D5D1BDF004A9354 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B564FE941D5D1BDF004A9354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B564FE961D5D1BDF004A9354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B564FE9B1D5D1BDF004A9354 /* GoogleFuedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleFuedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B564FE9F1D5D1BDF004A9354 /* GoogleFuedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleFuedTests.swift; sourceTree = "<group>"; };
+		B564FEA11D5D1BDF004A9354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B564FEA61D5D1BDF004A9354 /* GoogleFuedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleFuedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B564FEAA1D5D1BDF004A9354 /* GoogleFuedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleFuedUITests.swift; sourceTree = "<group>"; };
+		B564FEAC1D5D1BDF004A9354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B565119B1D651FF10063F2A2 /* Feugle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Feugle.png; sourceTree = "<group>"; };
+		B565119E1D652B280063F2A2 /* Guess My Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guess My Search.png"; sourceTree = "<group>"; };
+		B5FE26E81D5F493200F74BC1 /* Completions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
+		BFC00C49AF2ABB35FEE8AEC5 /* Pods_GoogleFuedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleFuedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2EB5BD5947F86C38FFEFF73 /* Pods_GoogleFued.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleFued.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D1DFE69B21624E5A7294A5 /* Pods-GoogleFuedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFuedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFuedUITests/Pods-GoogleFuedUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B564FE841D5D1BDF004A9354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3667ECB6C1B5770E52C98BEA /* Pods_GoogleFued.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B564FE981D5D1BDF004A9354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAED0F99AA5BE3856060B94 /* Pods_GoogleFuedTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B564FEA31D5D1BDF004A9354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1406DF775833D9ABC27DFD3D /* Pods_GoogleFuedUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21AAB111BDECEB51C101EAAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2EB5BD5947F86C38FFEFF73 /* Pods_GoogleFued.framework */,
+				129918492651C9E209D5E782 /* Pods_GoogleFuedTests.framework */,
+				BFC00C49AF2ABB35FEE8AEC5 /* Pods_GoogleFuedUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B564FE7E1D5D1BDF004A9354 = {
+			isa = PBXGroup;
+			children = (
+				B564FE891D5D1BDF004A9354 /* GoogleFued */,
+				B564FE9E1D5D1BDF004A9354 /* GoogleFuedTests */,
+				B564FEA91D5D1BDF004A9354 /* GoogleFuedUITests */,
+				B564FE881D5D1BDF004A9354 /* Products */,
+				BC07E67C70CE980CE7878F8C /* Pods */,
+				21AAB111BDECEB51C101EAAE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B564FE881D5D1BDF004A9354 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B564FE871D5D1BDF004A9354 /* GoogleFued.app */,
+				B564FE9B1D5D1BDF004A9354 /* GoogleFuedTests.xctest */,
+				B564FEA61D5D1BDF004A9354 /* GoogleFuedUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B564FE891D5D1BDF004A9354 /* GoogleFued */ = {
+			isa = PBXGroup;
+			children = (
+				B56162551D5E4F9800839D36 /* GFLogo.png */,
+				B565119E1D652B280063F2A2 /* Guess My Search.png */,
+				B565119B1D651FF10063F2A2 /* Feugle.png */,
+				B56162571D5E50A200839D36 /* Material-Search 48px.png */,
+				B51605F71D60C8D2000FFFBD /* Google Feud 1 X.png */,
+				B51605F91D60C8D7000FFFBD /* Google Feud 2 X.png */,
+				B51605FB1D60C8DE000FFFBD /* Google Feud 3 X.png */,
+				B505358A1D5E4204003A3F8A /* Roboto */,
+				B564FE8A1D5D1BDF004A9354 /* AppDelegate.swift */,
+				B564FE8C1D5D1BDF004A9354 /* ViewController.swift */,
+				B51605F51D60B8D1000FFFBD /* CategoryViewController.swift */,
+				B56162531D5E486000839D36 /* Questions.swift */,
+				B5FE26E81D5F493200F74BC1 /* Completions.swift */,
+				B564FE8E1D5D1BDF004A9354 /* Main.storyboard */,
+				B564FE911D5D1BDF004A9354 /* Assets.xcassets */,
+				B564FE931D5D1BDF004A9354 /* LaunchScreen.storyboard */,
+				B564FE961D5D1BDF004A9354 /* Info.plist */,
+			);
+			path = GoogleFued;
+			sourceTree = "<group>";
+		};
+		B564FE9E1D5D1BDF004A9354 /* GoogleFuedTests */ = {
+			isa = PBXGroup;
+			children = (
+				B564FE9F1D5D1BDF004A9354 /* GoogleFuedTests.swift */,
+				B564FEA11D5D1BDF004A9354 /* Info.plist */,
+			);
+			path = GoogleFuedTests;
+			sourceTree = "<group>";
+		};
+		B564FEA91D5D1BDF004A9354 /* GoogleFuedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B564FEAA1D5D1BDF004A9354 /* GoogleFuedUITests.swift */,
+				B564FEAC1D5D1BDF004A9354 /* Info.plist */,
+			);
+			path = GoogleFuedUITests;
+			sourceTree = "<group>";
+		};
+		BC07E67C70CE980CE7878F8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17BF00CA0FE1DE8CBA1D5172 /* Pods-GoogleFued.debug.xcconfig */,
+				616B6584DACCE2221EBC99DB /* Pods-GoogleFued.release.xcconfig */,
+				86522E16B3726C000BAAA517 /* Pods-GoogleFuedTests.debug.xcconfig */,
+				35FFE91BDC9590181C13E5C6 /* Pods-GoogleFuedTests.release.xcconfig */,
+				52E9C950E445FD73E9284066 /* Pods-GoogleFuedUITests.debug.xcconfig */,
+				C3D1DFE69B21624E5A7294A5 /* Pods-GoogleFuedUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B564FE861D5D1BDF004A9354 /* GoogleFued */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B564FEAF1D5D1BDF004A9354 /* Build configuration list for PBXNativeTarget "GoogleFued" */;
+			buildPhases = (
+				1E365F8BEBEB29ADE7C12CD8 /* [CP] Check Pods Manifest.lock */,
+				B564FE831D5D1BDF004A9354 /* Sources */,
+				B564FE841D5D1BDF004A9354 /* Frameworks */,
+				B564FE851D5D1BDF004A9354 /* Resources */,
+				68EAD97E13E89807014543B3 /* [CP] Embed Pods Frameworks */,
+				371F090B5DEF0CC98C9924CE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleFued;
+			productName = GoogleFued;
+			productReference = B564FE871D5D1BDF004A9354 /* GoogleFued.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B564FE9A1D5D1BDF004A9354 /* GoogleFuedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B564FEB21D5D1BDF004A9354 /* Build configuration list for PBXNativeTarget "GoogleFuedTests" */;
+			buildPhases = (
+				B6F8F0F89C4BB4E89116EEE0 /* [CP] Check Pods Manifest.lock */,
+				B564FE971D5D1BDF004A9354 /* Sources */,
+				B564FE981D5D1BDF004A9354 /* Frameworks */,
+				B564FE991D5D1BDF004A9354 /* Resources */,
+				EF51D0267F2D65A832BD90B9 /* [CP] Embed Pods Frameworks */,
+				E6928D1290C0E82384780E33 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B564FE9D1D5D1BDF004A9354 /* PBXTargetDependency */,
+			);
+			name = GoogleFuedTests;
+			productName = GoogleFuedTests;
+			productReference = B564FE9B1D5D1BDF004A9354 /* GoogleFuedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B564FEA51D5D1BDF004A9354 /* GoogleFuedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B564FEB51D5D1BDF004A9354 /* Build configuration list for PBXNativeTarget "GoogleFuedUITests" */;
+			buildPhases = (
+				F719EAE8C0D0B83865F6D853 /* [CP] Check Pods Manifest.lock */,
+				B564FEA21D5D1BDF004A9354 /* Sources */,
+				B564FEA31D5D1BDF004A9354 /* Frameworks */,
+				B564FEA41D5D1BDF004A9354 /* Resources */,
+				1D4A3F99625A18EA5939D272 /* [CP] Embed Pods Frameworks */,
+				82B7DBD42AA6E4B9EDEC12E7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B564FEA81D5D1BDF004A9354 /* PBXTargetDependency */,
+			);
+			name = GoogleFuedUITests;
+			productName = GoogleFuedUITests;
+			productReference = B564FEA61D5D1BDF004A9354 /* GoogleFuedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B564FE7F1D5D1BDF004A9354 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					GFCompLabel1,
+				);
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Carson Katri";
+				TargetAttributes = {
+					B564FE861D5D1BDF004A9354 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FH9CW55WY5;
+					};
+					B564FE9A1D5D1BDF004A9354 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B564FE861D5D1BDF004A9354;
+					};
+					B564FEA51D5D1BDF004A9354 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B564FE861D5D1BDF004A9354;
+					};
+				};
+			};
+			buildConfigurationList = B564FE821D5D1BDF004A9354 /* Build configuration list for PBXProject "GoogleFued" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B564FE7E1D5D1BDF004A9354;
+			productRefGroup = B564FE881D5D1BDF004A9354 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B564FE861D5D1BDF004A9354 /* GoogleFued */,
+				B564FE9A1D5D1BDF004A9354 /* GoogleFuedTests */,
+				B564FEA51D5D1BDF004A9354 /* GoogleFuedUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B564FE851D5D1BDF004A9354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B564FE951D5D1BDF004A9354 /* LaunchScreen.storyboard in Resources */,
+				B51605FA1D60C8D7000FFFBD /* Google Feud 2 X.png in Resources */,
+				B564FE921D5D1BDF004A9354 /* Assets.xcassets in Resources */,
+				B56162561D5E4F9800839D36 /* GFLogo.png in Resources */,
+				B51605FC1D60C8DE000FFFBD /* Google Feud 3 X.png in Resources */,
+				B565119C1D651FF10063F2A2 /* Feugle.png in Resources */,
+				B564FE901D5D1BDF004A9354 /* Main.storyboard in Resources */,
+				B505358B1D5E4204003A3F8A /* Roboto in Resources */,
+				B51605F81D60C8D2000FFFBD /* Google Feud 1 X.png in Resources */,
+				B565119F1D652B280063F2A2 /* Guess My Search.png in Resources */,
+				B56162581D5E50A200839D36 /* Material-Search 48px.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B564FE991D5D1BDF004A9354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B564FEA41D5D1BDF004A9354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D4A3F99625A18EA5939D272 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFuedUITests/Pods-GoogleFuedUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E365F8BEBEB29ADE7C12CD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		371F090B5DEF0CC98C9924CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFued/Pods-GoogleFued-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68EAD97E13E89807014543B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFued/Pods-GoogleFued-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82B7DBD42AA6E4B9EDEC12E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFuedUITests/Pods-GoogleFuedUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F8F0F89C4BB4E89116EEE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6928D1290C0E82384780E33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFuedTests/Pods-GoogleFuedTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF51D0267F2D65A832BD90B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFuedTests/Pods-GoogleFuedTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F719EAE8C0D0B83865F6D853 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B564FE831D5D1BDF004A9354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51605F61D60B8D1000FFFBD /* CategoryViewController.swift in Sources */,
+				B56162541D5E486000839D36 /* Questions.swift in Sources */,
+				B5FE26E91D5F493200F74BC1 /* Completions.swift in Sources */,
+				B564FE8D1D5D1BDF004A9354 /* ViewController.swift in Sources */,
+				B564FE8B1D5D1BDF004A9354 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B564FE971D5D1BDF004A9354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B564FEA01D5D1BDF004A9354 /* GoogleFuedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B564FEA21D5D1BDF004A9354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B564FEAB1D5D1BDF004A9354 /* GoogleFuedUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B564FE9D1D5D1BDF004A9354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B564FE861D5D1BDF004A9354 /* GoogleFued */;
+			targetProxy = B564FE9C1D5D1BDF004A9354 /* PBXContainerItemProxy */;
+		};
+		B564FEA81D5D1BDF004A9354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B564FE861D5D1BDF004A9354 /* GoogleFued */;
+			targetProxy = B564FEA71D5D1BDF004A9354 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B564FE8E1D5D1BDF004A9354 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B564FE8F1D5D1BDF004A9354 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B564FE931D5D1BDF004A9354 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B564FE941D5D1BDF004A9354 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B564FEAD1D5D1BDF004A9354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B564FEAE1D5D1BDF004A9354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B564FEB01D5D1BDF004A9354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17BF00CA0FE1DE8CBA1D5172 /* Pods-GoogleFued.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = GoogleFued/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFued;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		B564FEB11D5D1BDF004A9354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 616B6584DACCE2221EBC99DB /* Pods-GoogleFued.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = GoogleFued/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFued;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		B564FEB31D5D1BDF004A9354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86522E16B3726C000BAAA517 /* Pods-GoogleFuedTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoogleFuedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFuedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleFued.app/GoogleFued";
+			};
+			name = Debug;
+		};
+		B564FEB41D5D1BDF004A9354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35FFE91BDC9590181C13E5C6 /* Pods-GoogleFuedTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoogleFuedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFuedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleFued.app/GoogleFued";
+			};
+			name = Release;
+		};
+		B564FEB61D5D1BDF004A9354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E9C950E445FD73E9284066 /* Pods-GoogleFuedUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GoogleFuedUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFuedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoogleFued;
+			};
+			name = Debug;
+		};
+		B564FEB71D5D1BDF004A9354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D1DFE69B21624E5A7294A5 /* Pods-GoogleFuedUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GoogleFuedUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFuedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoogleFued;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B564FE821D5D1BDF004A9354 /* Build configuration list for PBXProject "GoogleFued" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B564FEAD1D5D1BDF004A9354 /* Debug */,
+				B564FEAE1D5D1BDF004A9354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B564FEAF1D5D1BDF004A9354 /* Build configuration list for PBXNativeTarget "GoogleFued" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B564FEB01D5D1BDF004A9354 /* Debug */,
+				B564FEB11D5D1BDF004A9354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B564FEB21D5D1BDF004A9354 /* Build configuration list for PBXNativeTarget "GoogleFuedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B564FEB31D5D1BDF004A9354 /* Debug */,
+				B564FEB41D5D1BDF004A9354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B564FEB51D5D1BDF004A9354 /* Build configuration list for PBXNativeTarget "GoogleFuedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B564FEB61D5D1BDF004A9354 /* Debug */,
+				B564FEB71D5D1BDF004A9354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B564FE7F1D5D1BDF004A9354 /* Project object */;
+}
