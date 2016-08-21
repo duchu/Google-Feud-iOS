@@ -1,7 +1,7 @@
 ![Guess My Search](https://raw.githubusercontent.com/CTKRocks/Google-Feud-iOS/master/GoogleFued/Guess%20My%20Search.png)
 
 <p align="center">
-  ![Google Feud Preview](http://i.giphy.com/3oz8xGSqhN7yk8UJgI.gif)
+  <img src="http://i.giphy.com/3oz8xGSqhN7yk8UJgI.gif" />
 </p>
 
 ### Google Feud for iOS
@@ -23,7 +23,7 @@ Your ready to go! Take a look at the code and try it out on your iDevice!
 ### Features
 Unlike other Google Feud apps, Guess My Search has categories, which are UIButtons that access different arrays containing the questions from Justin Hook's site Google Feud.
 <p align="center">
-  ![categories in guess my search](http://imgur.com/GXvfj9u.png)
+  <img src="http://imgur.com/GXvfj9u.png" />
 </p>
 
 ### Authors and Contributors
