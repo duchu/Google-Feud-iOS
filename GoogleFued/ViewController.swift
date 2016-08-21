@@ -13,6 +13,18 @@ import SwiftyJSON
 import Alamofire
 import PromiseKit
 
+// Extensions
+extension UIViewController {
+    func hideKeyboardOnTap() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
@@ -54,7 +66,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var playerScore: UILabel!
     var score = 0
     let defaults = NSUserDefaults.standardUserDefaults()
-    let key = "score"
+    let key = ["score", "guess"]
+    
+    // Hints
+    @IBOutlet weak var hintBtn: UIButton!
+    var hints: Bool = false
+    
+    // Answers found tracker
+    var found: Int = 0
+    var foundStrings = [String]()
     
     
     
@@ -63,12 +83,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardOnTap()
+        
         // Fix the score
-        score = defaults.integerForKey(key)
+        score = defaults.integerForKey(key[0])
         updateScore()
         
         // Do any additional setup after loading the view, typically from a nib.
-        newQuestion(category)
+        question = GFQuestions().getQuestionByCategory(category)
+        createPrefix()
+        newQuestion()
         
         // Hide some stuff
         self.nextRound.hidden = true
@@ -96,6 +120,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "showItemSegue") {
             let controller: CategoryViewController = (segue.destinationViewController as! UINavigationController).topViewController as! CategoryViewController
+            print(controller)
         }
     }
     
@@ -121,8 +146,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         */
-
-        checkAnswer()
+        
+        if !foundStrings.contains(answer.text!.lowercaseString.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())) {
+            checkAnswer()
+        }
         
         print("\n\nTRIES LEFT: \(tries)")
     }
@@ -130,7 +157,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Pressing Enter does the same as pressing search
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        checkAnswer()
+        print(foundStrings)
+        if !foundStrings.contains(answer.text!.lowercaseString.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())) {
+            checkAnswer()
+        }
         print("\n\nTRIES LEFT: \(tries)")
         return true
     }
@@ -167,10 +197,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     // Questions
-    func newQuestion(category: Int) {
-        
-        question = GFQuestions().getQuestionByCategory(category)
-        createPrefix()
+    func newQuestion() {
         
         // Fill the completions view
         var query: String = self.question
@@ -193,42 +220,72 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         case 0:
                             let label = self.comp1.viewWithTag(1) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 1:
-                            let label = self.comp2.viewWithTag(1) as? UILabel
+                            let label = self.comp2.viewWithTag(-2) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 2:
-                            let label = self.comp3.viewWithTag(1) as? UILabel
+                            let label = self.comp3.viewWithTag(-3) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 3:
-                            let label = self.comp4.viewWithTag(1) as? UILabel
+                            let label = self.comp4.viewWithTag(4) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 4:
-                            let label = self.comp5.viewWithTag(1) as? UILabel
+                            let label = self.comp5.viewWithTag(5) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 5:
-                            let label = self.comp6.viewWithTag(1) as? UILabel
+                            let label = self.comp6.viewWithTag(6) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 6:
-                            let label = self.comp7.viewWithTag(1) as? UILabel
+                            let label = self.comp7.viewWithTag(7) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 7:
-                            let label = self.comp8.viewWithTag(1) as? UILabel
+                            let label = self.comp8.viewWithTag(8) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 8:
-                            let label = self.comp9.viewWithTag(1) as? UILabel
+                            let label = self.comp9.viewWithTag(9) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         case 9:
-                            let label = self.comp10.viewWithTag(1) as? UILabel
+                            let label = self.comp10.viewWithTag(10) as? UILabel
                             label?.text = completion.1.string
+                            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.searchLabel(_:)))
+                            label?.addGestureRecognizer(tap)
+                            label?.userInteractionEnabled = true
                             break
                         default:
                             break
@@ -274,9 +331,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                             
                             print(completion.1)
                             
-                            if completion.1 == JSON((self.answer.text?.lowercaseString)!) {
+                            if completion.1 == JSON((self.answer.text?.lowercaseString)!.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())) {
                                 print("CORRECT!")
-                                
+                                // Add the string to the array
+                                self.foundStrings.append(completion.1.string!)
                                 print("\((self.answer.text?.lowercaseString)!)")
                                 print("\n\(completion.1) equals \(JSON((self.answer.text?.lowercaseString)!))")
                                 
@@ -284,51 +342,156 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                 switch completion.1 {
                                 case json[1][0]:
                                     let cover = self.comp1.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                    }, completion: nil)
+                                    let label = self.comp1.viewWithTag(1) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][1]:
                                     let cover = self.comp2.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp2.viewWithTag(-2) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][2]:
                                     let cover = self.comp3.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp3.viewWithTag(-3) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][3]:
                                     let cover = self.comp4.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp4.viewWithTag(4) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][4]:
                                     let cover = self.comp5.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp5.viewWithTag(5) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][5]:
                                     let cover = self.comp6.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp6.viewWithTag(6) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][6]:
                                     let cover = self.comp7.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp7.viewWithTag(7) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][7]:
                                     let cover = self.comp8.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp8.viewWithTag(8) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][8]:
                                     let cover = self.comp9.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp9.viewWithTag(9) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 case json[1][9]:
                                     let cover = self.comp10.viewWithTag(0)! as UIView
-                                    cover.hidden = true
+                                    cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+                                    for view in cover.subviews {
+                                        view.hidden = true
+                                    }
+                                    UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+                                        
+                                        cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+                                        
+                                        }, completion: nil)
+                                    let label = self.comp10.viewWithTag(10) as? UILabel
+                                    label?.text = completion.1.string
                                     break
                                 default:
                                     break
                                 }
                                 
                                 // Give the player the points they deserve
-                                self.score += index * 1000
-                                self.updateScore()
+                                if self.hints {
+                                    self.score += index * 500
+                                    self.updateScore()
+                                } else {
+                                    self.score += index * 1000
+                                    self.updateScore()
+                                }
                                 
                                 fulfill(true)
                                 return
@@ -366,6 +529,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func checkAnswer() -> Void {
         
+        // Add one to the guesses
+        defaults.setInteger(defaults.integerForKey("guess") + 1, forKey: key[1])
        
         // Get the content from suggestqueries.google.com
         // Replace spaces with %20
@@ -383,26 +548,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             if correct {
                 
-                // Check if they won
-                let cover = self.comp1.viewWithTag(0)! as UIView
-                let cover1 = self.comp2.viewWithTag(0)! as UIView
-                let cover2 = self.comp3.viewWithTag(0)! as UIView
-                let cover3 = self.comp4.viewWithTag(0)! as UIView
-                let cover4 = self.comp5.viewWithTag(0)! as UIView
-                let cover5 = self.comp6.viewWithTag(0)! as UIView
-                let cover6 = self.comp7.viewWithTag(0)! as UIView
-                let cover7 = self.comp8.viewWithTag(0)! as UIView
-                let cover8 = self.comp9.viewWithTag(0)! as UIView
-                let cover9 = self.comp10.viewWithTag(0)! as UIView
+                self.found += 1
                 
-                if cover.hidden == true && cover1.hidden == true && cover2.hidden == true && cover3.hidden == true && cover4.hidden == true && cover5.hidden == true && cover6.hidden == true && cover7.hidden == true && cover8.hidden == true && cover9.hidden == true {
+                // Check if they won
+                if self.found >= 9 {
                     
                     self.tries = 0
                     // self.newQuestion(self.category)
                     self.nextRound.hidden = false
                     self.answer.hidden = true
                     self.searchBtn.hidden = true
-                    self.showAnswers()
+                    self.showAnswers(true)
                     
                 }
             }
@@ -414,9 +570,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     self.nextRound.hidden = false
                     self.answer.hidden = true
                     self.searchBtn.hidden = true
-                    self.showAnswers()
+                    if self.hints {
+                        self.newQuestion()
+                    }
+                    self.showAnswers(true)
                     // Save the players new score to defaults
-                    self.defaults.setInteger(self.score, forKey: self.key)
+                    self.defaults.setInteger(self.score, forKey: self.key[0])
                 }
             }
             
@@ -428,7 +587,112 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func showAnswers() {
+    func showAnswers(shown: Bool) {
+        
+        let cover = self.comp1.viewWithTag(0)! as UIView
+        cover.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover.frame = CGRectMake(cover.frame.maxX, 0, 0, cover.frame.height)
+            
+            }, completion: nil)
+        let cover1 = self.comp2.viewWithTag(0)! as UIView
+        cover1.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover1.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover1.frame = CGRectMake(cover1.frame.maxX, 0, 0, cover1.frame.height)
+            
+            }, completion: nil)
+        let cover2 = self.comp3.viewWithTag(0)! as UIView
+        cover2.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover2.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover2.frame = CGRectMake(cover2.frame.maxX, 0, 0, cover2.frame.height)
+            
+            }, completion: nil)
+        let cover3 = self.comp4.viewWithTag(0)! as UIView
+        cover3.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover3.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover3.frame = CGRectMake(cover3.frame.maxX, 0, 0, cover3.frame.height)
+            
+            }, completion: nil)
+        let cover4 = self.comp5.viewWithTag(0)! as UIView
+        cover4.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover4.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover4.frame = CGRectMake(cover4.frame.maxX, 0, 0, cover4.frame.height)
+            
+            }, completion: nil)
+        let cover5 = self.comp6.viewWithTag(0)! as UIView
+        cover5.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover5.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover5.frame = CGRectMake(cover5.frame.maxX, 0, 0, cover5.frame.height)
+            
+            }, completion: nil)
+        let cover6 = self.comp7.viewWithTag(0)! as UIView
+        cover6.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover6.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover6.frame = CGRectMake(cover6.frame.maxX, 0, 0, cover6.frame.height)
+            
+            }, completion: nil)
+        let cover7 = self.comp8.viewWithTag(0)! as UIView
+        cover7.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover7.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover7.frame = CGRectMake(cover7.frame.maxX, 0, 0, cover7.frame.height)
+            
+            }, completion: nil)
+        let cover8 = self.comp9.viewWithTag(0)! as UIView
+        cover8.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover8.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover8.frame = CGRectMake(cover8.frame.maxX, 0, 0, cover8.frame.height)
+            
+            }, completion: nil)
+        let cover9 = self.comp10.viewWithTag(0)! as UIView
+        cover9.backgroundColor = UIColor(red:0.29, green:0.55, blue:0.95, alpha:1.0)
+        for view in cover9.subviews {
+            view.hidden = true
+        }
+        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            
+            cover9.frame = CGRectMake(cover9.frame.maxX, 0, 0, cover9.frame.height)
+            
+            }, completion: nil)
+        
+    }
+    
+    func hideAnswers() {
         
         let cover = self.comp1.viewWithTag(0)! as UIView
         cover.hidden = true
@@ -465,6 +729,182 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func searchAnswer(sender: UIButton) {
         
         UIApplication.sharedApplication().openURL(NSURL(string: "http://www.google.com/#q=\(sender.titleLabel?.text)")!)
+        
+    }
+    
+    @IBAction func showHint(sender: AnyObject) {
+        
+        // Fix the button's image
+        hints = !hints
+        if hints {
+            hintBtn.setImage(UIImage(named: "Visible-48.png"), forState: .Disabled)
+            // Show the hints
+            showHints()
+            showAnswers(true)
+            // Make the answers you already got appear
+            var query: String = self.question
+            query = query.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+            foundStrings = []
+            found = 0
+            /*
+            for foundAnswer in foundStrings {
+                
+                print(foundAnswer)
+                self.answer.text = foundAnswer
+                firstly {
+                    
+                    callService(query)
+                    
+                } .then { correct -> Bool in
+                        
+                    self.answer.text = ""
+                    self.createPrefix()
+                    
+                    return correct
+                }
+                
+            }
+            answer.text = ""
+            */
+        } else {
+            hintBtn.setImage(UIImage(named: "Invisible-48.png"), forState: .Disabled)
+            hideAnswers()
+        }
+        
+        // Disable the button
+        hintBtn.enabled = false
+        
+    }
+    
+    func showHints() {
+
+        for index in 0...9 {
+            
+            switch index {
+            case 0:
+                let label = self.comp1.viewWithTag(1) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 1:
+                let label = self.comp2.viewWithTag(-2) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 2:
+                let label = self.comp3.viewWithTag(-3) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 3:
+                let label = self.comp4.viewWithTag(4) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 4:
+                let label = self.comp5.viewWithTag(5) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 5:
+                let label = self.comp6.viewWithTag(6) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 6:
+                let label = self.comp7.viewWithTag(7) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 7:
+                let label = self.comp8.viewWithTag(8) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 8:
+                let label = self.comp9.viewWithTag(9) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            case 9:
+                let label = self.comp10.viewWithTag(10) as? UILabel
+                label?.text = createHintString(label?.text)
+                break
+            default:
+                break
+            }
+            
+            switch index {
+            case 0:
+                let points = self.comp1.viewWithTag(3) as? UILabel
+                points?.text = "5,000"
+                break
+            case 1:
+                let points = self.comp2.viewWithTag(3) as? UILabel
+                points?.text = "4,500"
+                break
+            case 2:
+                let points = self.comp3.viewWithTag(3) as? UILabel
+                points?.text = "4,000"
+                break
+            case 3:
+                let points = self.comp4.viewWithTag(3) as? UILabel
+                points?.text = "3,500"
+                break
+            case 4:
+                let points = self.comp5.viewWithTag(3) as? UILabel
+                points?.text = "3,000"
+                break
+            case 5:
+                let points = self.comp6.viewWithTag(3) as? UILabel
+                points?.text = "2,500"
+                break
+            case 6:
+                let points = self.comp7.viewWithTag(3) as? UILabel
+                points?.text = "2,000"
+                break
+            case 7:
+                let points = self.comp8.viewWithTag(3) as? UILabel
+                points?.text = "1,500"
+                break
+            case 8:
+                let points = self.comp9.viewWithTag(3) as? UILabel
+                points?.text = "1,000"
+                break
+            case 9:
+                let points = self.comp10.viewWithTag(3) as? UILabel
+                points?.text = "500"
+                break
+            default:
+                break
+            }
+            
+        }
+    }
+    
+    func createHintString(target: String?) -> String {
+        
+        var hint: String = ""
+        
+        let words: Int = (target?.componentsSeparatedByString(" ").count)!
+        
+        if words > question.componentsSeparatedByString(" ").count + 1 {
+            
+            hint = "\(words - question.componentsSeparatedByString(" ").count) words"
+            
+        } else {
+        
+            for character in target!.stringByReplacingOccurrencesOfString(question.lowercaseString, withString: "").characters {
+                if character == " " {
+                    hint = "\(hint) "
+                } else {
+                    hint = "\(hint)__ "
+                }
+            }
+        }
+        
+        return hint
+        
+    }
+    
+    func searchLabel(sender: UITapGestureRecognizer) {
+        
+        let tag = sender.view?.tag
+        let label = self.view.viewWithTag(-1)!.viewWithTag(tag!) as! UILabel
+        print(label.text!)
+        let url = "https://google.com/#q=\(label.text!.stringByReplacingOccurrencesOfString(" ", withString: "%20"))"
+        UIApplication.sharedApplication().openURL(NSURL(string: url)!)
         
     }
     

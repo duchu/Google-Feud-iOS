@@ -27,6 +27,8 @@
 		B564FEAB1D5D1BDF004A9354 /* GoogleFuedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564FEAA1D5D1BDF004A9354 /* GoogleFuedUITests.swift */; };
 		B565119C1D651FF10063F2A2 /* Feugle.png in Resources */ = {isa = PBXBuildFile; fileRef = B565119B1D651FF10063F2A2 /* Feugle.png */; };
 		B565119F1D652B280063F2A2 /* Guess My Search.png in Resources */ = {isa = PBXBuildFile; fileRef = B565119E1D652B280063F2A2 /* Guess My Search.png */; };
+		B5F4295C1D67CB5A00882263 /* Invisible-48.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F4295B1D67CB5A00882263 /* Invisible-48.png */; };
+		B5F4295E1D67CB6F00882263 /* Visible-48.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F4295D1D67CB6F00882263 /* Visible-48.png */; };
 		B5FE26E91D5F493200F74BC1 /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE26E81D5F493200F74BC1 /* Completions.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		B564FEAC1D5D1BDF004A9354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B565119B1D651FF10063F2A2 /* Feugle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Feugle.png; sourceTree = "<group>"; };
 		B565119E1D652B280063F2A2 /* Guess My Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guess My Search.png"; sourceTree = "<group>"; };
+		B5F4295B1D67CB5A00882263 /* Invisible-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Invisible-48.png"; sourceTree = "<group>"; };
+		B5F4295D1D67CB6F00882263 /* Visible-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Visible-48.png"; sourceTree = "<group>"; };
 		B5FE26E81D5F493200F74BC1 /* Completions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
 		BFC00C49AF2ABB35FEE8AEC5 /* Pods_GoogleFuedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleFuedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EB5BD5947F86C38FFEFF73 /* Pods_GoogleFued.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleFued.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,13 +150,7 @@
 		B564FE891D5D1BDF004A9354 /* GoogleFued */ = {
 			isa = PBXGroup;
 			children = (
-				B56162551D5E4F9800839D36 /* GFLogo.png */,
-				B565119E1D652B280063F2A2 /* Guess My Search.png */,
-				B565119B1D651FF10063F2A2 /* Feugle.png */,
-				B56162571D5E50A200839D36 /* Material-Search 48px.png */,
-				B51605F71D60C8D2000FFFBD /* Google Feud 1 X.png */,
-				B51605F91D60C8D7000FFFBD /* Google Feud 2 X.png */,
-				B51605FB1D60C8DE000FFFBD /* Google Feud 3 X.png */,
+				B5F4295A1D67CB0400882263 /* Images */,
 				B505358A1D5E4204003A3F8A /* Roboto */,
 				B564FE8A1D5D1BDF004A9354 /* AppDelegate.swift */,
 				B564FE8C1D5D1BDF004A9354 /* ViewController.swift */,
@@ -183,6 +181,22 @@
 				B564FEAC1D5D1BDF004A9354 /* Info.plist */,
 			);
 			path = GoogleFuedUITests;
+			sourceTree = "<group>";
+		};
+		B5F4295A1D67CB0400882263 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B5F4295B1D67CB5A00882263 /* Invisible-48.png */,
+				B5F4295D1D67CB6F00882263 /* Visible-48.png */,
+				B56162551D5E4F9800839D36 /* GFLogo.png */,
+				B565119E1D652B280063F2A2 /* Guess My Search.png */,
+				B565119B1D651FF10063F2A2 /* Feugle.png */,
+				B56162571D5E50A200839D36 /* Material-Search 48px.png */,
+				B51605F71D60C8D2000FFFBD /* Google Feud 1 X.png */,
+				B51605F91D60C8D7000FFFBD /* Google Feud 2 X.png */,
+				B51605FB1D60C8DE000FFFBD /* Google Feud 3 X.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		BC07E67C70CE980CE7878F8C /* Pods */ = {
@@ -315,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F4295C1D67CB5A00882263 /* Invisible-48.png in Resources */,
 				B564FE951D5D1BDF004A9354 /* LaunchScreen.storyboard in Resources */,
 				B51605FA1D60C8D7000FFFBD /* Google Feud 2 X.png in Resources */,
 				B564FE921D5D1BDF004A9354 /* Assets.xcassets in Resources */,
@@ -324,6 +339,7 @@
 				B564FE901D5D1BDF004A9354 /* Main.storyboard in Resources */,
 				B505358B1D5E4204003A3F8A /* Roboto in Resources */,
 				B51605F81D60C8D2000FFFBD /* Google Feud 1 X.png in Resources */,
+				B5F4295E1D67CB6F00882263 /* Visible-48.png in Resources */,
 				B565119F1D652B280063F2A2 /* Guess My Search.png in Resources */,
 				B56162581D5E50A200839D36 /* Material-Search 48px.png in Resources */,
 			);
@@ -645,6 +661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFued;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -661,6 +678,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ktree.GoogleFued;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

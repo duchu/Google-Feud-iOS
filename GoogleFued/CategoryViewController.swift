@@ -13,7 +13,8 @@ class CategoryViewController: UIViewController {
     var category = 0
     
     @IBOutlet weak var score: UILabel!
-    let key = "score"
+    @IBOutlet weak var guesses: UILabel!
+    let key = ["score", "guess"]
     let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
@@ -26,7 +27,8 @@ class CategoryViewController: UIViewController {
         
         let format = NSNumberFormatter()
         format.numberStyle = NSNumberFormatterStyle.DecimalStyle
-        score.text = "\(format.stringFromNumber(defaults.integerForKey(key))!)"
+        score.text = "\(format.stringFromNumber(defaults.integerForKey(key[0]))!)"
+        guesses.text = "\(format.stringFromNumber(defaults.integerForKey(key[1]))!)"
         
     }
     
@@ -57,9 +59,11 @@ class CategoryViewController: UIViewController {
     }
     
     @IBAction func resetScore(sender: AnyObject) {
-        defaults.setInteger(0, forKey: key)
+        defaults.setInteger(0, forKey: key[0])
+        defaults.setInteger(0, forKey: key[1])
         let format = NSNumberFormatter()
         format.numberStyle = NSNumberFormatterStyle.DecimalStyle
-        score.text = "\(format.stringFromNumber(defaults.integerForKey(key))!)"
+        score.text = "\(format.stringFromNumber(defaults.integerForKey(key[0]))!)"
+        guesses.text = "\(format.stringFromNumber(defaults.integerForKey(key[1]))!)"
     }
 }
