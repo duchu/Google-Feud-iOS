@@ -1,6 +1,5 @@
-![Guess My Search](https://raw.githubusercontent.com/CTKRocks/Google-Feud-iOS/master/GoogleFued/Guess%20My%20Search.png)
-
 <p align="center">
+  <img src="https://raw.githubusercontent.com/CTKRocks/Google-Feud-iOS/master/GoogleFued/Guess%20My%20Search.png" />
   <img src="http://i.giphy.com/3oz8xGSqhN7yk8UJgI.gif" />
 </p>
 
