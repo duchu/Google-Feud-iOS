@@ -26,6 +26,8 @@ Unlike other Google Feud apps, Guess My Search has categories, which are UIButto
   <img src="http://imgur.com/GXvfj9u.png" />
 </p>
 
+To get the data from Google, I use [Alamofire](https://github.com/Alamofire/Alamofire) along with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) for parsing
+
 ### Authors and Contributors
 Google Feud was originally created by Justin Hook. Take a look at [his site](http://googlefeud.com/).
 Google Feud for iOS was developed by Carson Katri and published by Ryan Katri.
