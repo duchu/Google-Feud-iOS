@@ -5,9 +5,12 @@ Google Feud for iOS is an open-source Swift application for Apple's iOS. You can
 
 ### How to Compile
 To compile this project install CocoaPods and install the Pods.
+
+> NOTE: If you don't have cocoapods, install them with `sudo gem install cocoapods`
+
 ```shell
-$ sudo gem install cocoapods
-$ cd PATH/TO/DOWNLOAD
+$ git clone https://github.com/CTKRocks/Google-Feud-iOS.git
+$ cd PATH/TO/CLONE
 $ pod install
 ```
 Next you need to open the GoogleFeud.xcworkspace **NOT** the GoogleFeud.xcodeproj
