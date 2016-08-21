@@ -20,7 +20,7 @@ Your ready to go! Take a look at the code and try it out on your iDevice!
 
 ### Features
 Unlike other Google Feud apps, Guess My Search has categories, which are UIButtons that access different arrays containing the questions from Justin Hook's site Google Feud.
-![categories in guess my search](http://imgur.com/GXvfj9u)
+![categories in guess my search](http://imgur.com/GXvfj9u.png)
 
 ### Authors and Contributors
 Google Feud was originally created by Justin Hook. Take a look at [his site](http://googlefeud.com/).
