@@ -1,1 +1,20 @@
-### Google Feud for iOS\r\nGoogle Feud for iOS is an open-source Swift application for Apple's iOS. You can download the app on the AppStore. Please use the code to learn from and not to copy from. Commit useful code to help shape this project.\r\n\r\n### How to Compile\r\nTo compile this project install CocoaPods and install the Pods.\r\n```shell\r\n$ sudo gem install cocoapods\r\n$ cd PATH/TO/DOWNLOAD\r\n$ pod install\r\n```\r\n\r\nNext you need to open the GoogleFeud.xcworkspace **NOT** the GoogleFeud.xcodeproj\r\nYour ready to go! Take a look at the code and try it out on your iDevice!\r\n\r\n### Authors and Contributors\r\nGoogle Feud was originally created by Justin Hook. Take a look at [his site](http://googlefeud.com/).\r\nGoogle Feud for iOS was developed by Carson Katri and published by Ryan Katri.\r\n\r\n### Contact\r\n[email](mailto:carson.katri@gmail.com)
+### Google Feud for iOS
+Google Feud for iOS is an open-source Swift application for Apple's iOS. You can download the app on the AppStore. Please use the code to learn from and not to copy from. Commit useful code to help shape this project.
+
+### How to Compile
+To compile this project install CocoaPods and install the Pods.
+```shell
+$ sudo gem install cocoapods
+$ cd PATH/TO/DOWNLOAD
+$ pod install
+```
+Next you need to open the GoogleFeud.xcworkspace **NOT** the GoogleFeud.xcodeproj
+Your ready to go! Take a look at the code and try it out on your iDevice!
+
+### Authors and Contributors
+Google Feud was originally created by Justin Hook. Take a look at [his site](http://googlefeud.com/).
+Google Feud for iOS was developed by Carson Katri and published by Ryan Katri.
+
+### Contact
+
+[email](mailto:carson.katri@gmail.com)
