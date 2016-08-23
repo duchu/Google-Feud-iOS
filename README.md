@@ -4,7 +4,7 @@
 </p>
 
 ### Google Feud for iOS
-Google Feud for iOS is an open-source Swift application for Apple's iOS. You can download the app on the AppStore. Please use the code to learn from and not to copy from. Commit useful code to help shape this project.
+Google Feud for iOS is an open-source Swift application for Apple's iOS. You can [download the app on the AppStore.](https://itunes.apple.com/us/app/guess-my-search/id1144264060?mt=8) Please use the code to learn from and not to copy from. Commit useful code to help shape this project.
 
 ### How to Compile
 To compile this project install CocoaPods and install the Pods.
